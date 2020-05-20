@@ -1,0 +1,4 @@
+pig
+*.o
+.ccls-cache/
+input.txt
