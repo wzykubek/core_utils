@@ -1,4 +1,4 @@
 pig
-*.o
+*.out
 .ccls-cache/
 input.txt
