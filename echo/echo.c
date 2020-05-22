@@ -39,8 +39,11 @@ void echo(char *input) {
         case 't':
           printf("\t");
           break;
+        default:
+          printf("\\");
         }
-      }
+      } else
+        printf("\\");
     } else {
       printf("%c", input[i]);
     }
