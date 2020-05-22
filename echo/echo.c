@@ -30,8 +30,8 @@ void short_opt(int argc, char **argv, int *j) {
 void echo(char *input) {
   size_t n = strlen(input);
   for (int i = 0; i < n; i++) {
-    if (escapes_interpretation == 1) {
-      if (input[i] == '\\') {
+    if (input[i] == '\\') {
+      if (escapes_interpretation == 1) {
         switch (input[++i]) {
         case 'n':
           printf("\n");
