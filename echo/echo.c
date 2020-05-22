@@ -54,6 +54,7 @@ void echo(char *input) {
 }
 
 int main(int argc, char **argv) {
+  if (argc < 2) exit(EXIT_SUCCESS);
   for (int j = 1; argc - j; j++) {
     if (argv[j][0] == '-') {
       if (strcmp(argv[j], "--version") == 0) {
