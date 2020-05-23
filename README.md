@@ -8,6 +8,7 @@ For get new skills in development and reverse engineering. 🙃
 # Available
 + echo
 + head
++ cat
 + true
 + false
 
@@ -32,3 +33,7 @@ echo --help
 ### true & false
 These tools don't have any useless additional options. Simply returns
 only 0 (true) or 1 (false).
+
+### cat
+Available only `-n` additional flag for numerate lines.
+In my opinion other options are useless.
