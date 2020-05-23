@@ -2,7 +2,28 @@
 #include <stdlib.h>
 #include <string.h>
 
-void show_help() {}
+void show_help() {
+  printf("Usage: echo [OPTION]... [STRING]\n");
+  printf("Echo the STRING to standard output.\n");
+  printf("\n\t-n\t\t\t\tdo not output the trailing newline\n");
+  printf("\t-e\t\t\t\tenable interpretation of backslash escapes\n");
+  printf("\t-E\t\t\t\tdisable interpretation of backslash escapes (default)\n");
+  printf("\t--help\t\t\tdisplay this help and exit\n");
+  printf("\t--version\t\tdisplay version information and exit\n");
+  printf("\nIf -e is in effect, the following sequences are recognized:\n");
+  printf("\n\t\\\\\t\t backslash\n");
+  printf("\t\\a\t\t alert (BEL)\n");
+  printf("\t\\b\t\t backspace\n");
+  printf("\t\\c\t\t produce no further output\n");
+  printf("\t\\e\t\t escape\n");
+  printf("\t\\f\t\t form feed\n");
+  printf("\t\\n\t\t new line\n");
+  printf("\t\\r\t\t carriage return\n");
+  printf("\t\\t\t\t horizontal tab\n");
+  printf("\t\\v\t\t vertical tab\n");
+  printf("\nsamedamci's inplementation of coreutils\n");
+  printf("repo: <https://github.com/samedamci/core_utils>\n");
+}
 
 static char *input;
 static int trailing_newline = 1;
@@ -80,6 +101,7 @@ int main(int argc, char **argv) {
     if (argv[j][0] == '-') {
       if (strcmp(argv[j], "--version") == 0) {
         puts("version 0.1");
+        exit(EXIT_SUCCESS);
       } else if (strcmp(argv[j], "--help") == 0) {
         show_help();
         exit(EXIT_SUCCESS);
