@@ -37,3 +37,15 @@ only 0 (true) or 1 (false).
 ### cat
 Available only `-n` additional flag for numerate lines.
 In my opinion other options are useless.
+
+# Compilation
+### GCC
+```bash
+gcc -O3 utility_name.c -o binary_name
+```
+# Installation
+Not recommended. This is only for fun, but if you very want... you can.
+It should be works ok. 😄
+```bash
+sudo install -Dm755 "binary_name" "/usr/bin/binary_name"
+```
